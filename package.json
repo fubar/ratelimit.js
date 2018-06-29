@@ -12,9 +12,6 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "coffee --bare --compile --output lib src/*.coffee",
-    "postpublish": "rm -rf lib",
-    "postinstall": "coffee --bare --compile --output lib src/*.coffee",
     "test": "node_modules/.bin/grunt test"
   },
   "repository": {
