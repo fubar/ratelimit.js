@@ -10,8 +10,10 @@
     "redis",
     "redis rate limiting"
   ],
-  "main": "lib/index.js",
+  "main": "release/index.js",
   "scripts": {
+    "prepublish": "coffee --bare --compile --output lib src/*.coffee",
+    "postpublish": "rm -rf lib",
     "test": "node_modules/.bin/grunt test"
   },
   "repository": {
