@@ -28,4 +28,4 @@ node_modules
 .lock-wscript
 
 # Ignore lib directory as this includes compiled JS files
-lib
+# lib
