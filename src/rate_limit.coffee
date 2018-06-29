@@ -2,6 +2,7 @@ EvalSha = require 'redis-evalsha'
 _ = require 'underscore'
 async = require 'async'
 fs = require 'fs'
+path = require 'path';
 
 module.exports = class RateLimit
   @DEFAULT_PREFIX: 'ratelimit'
@@ -36,7 +37,7 @@ module.exports = class RateLimit
     @rules = @convertRules rules
 
   readLua: (filename) ->
-    fs.readFileSync "#{__dirname}/../lua/#{filename}.lua", 'utf8'
+    fs.readFileSync(path.resolve("../lua/#{filename}.lua"), 'utf8')
 
   checkLimitScript: ->
     [
